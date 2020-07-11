@@ -1,0 +1,46 @@
+<!-- Template for the cities component -->
+<html>
+<body>
+<div style="text-align:center">
+  <h1>
+    Welcome to Your Own Weather
+  </h1>
+  <img width="500" height="500"  src="../assets/img/Weather-forecast-for-the-week-in-India.jpg">
+</div>
+
+
+<search></search>
+
+<div *ngIf="chart" class="can">
+  <h2 style="text-align:center"> Chat Represent Wheather of Your Current location hourly ..!! </h2>
+
+  <canvas   id="canvas">{{ chart }}</canvas>
+</div>
+
+
+<div class="container">
+  <h2>City list</h2>
+  <p>Click on the city name to get extended forecast</p>
+  <div>
+    <table id="citiesTable" class="table">
+      <thead>
+        <tr>
+          <th>City name</th>
+          <th>Average temperature (C)</th>
+          <th>Average wind strength (m/s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let city of data.list">
+          <td class="forecast-info-main"><img src="https://openweathermap.org/img/w/{{city.weather[0].icon}}.png" class="forecast-icon" alt="forecast"><a [routerLink]="['/city', city.id]">{{city.name}}</a></td>
+          <td class="forecast-info">{{city.main.temp}}</td>
+          <td class="forecast-info-sec">{{city.wind.speed}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+</body>
+</html>

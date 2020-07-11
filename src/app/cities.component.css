@@ -1,0 +1,56 @@
+body{
+  background-color: burlywood;
+}
+
+h1 {
+    color: black;
+}
+
+h2, p {
+    color: black;
+}
+
+.cityRow {
+    background: black;
+}
+
+.forecast-icon {
+    margin-right: 15px;
+}
+
+.table>thead>tr>th {
+    font-size: 17px;
+    color:purple;
+}
+
+.table>tbody>tr>td {
+    vertical-align: middle;
+}
+
+.forecast-info {
+    text-align: center;
+    color:black;
+    font-size: 20px;
+    background-color:#cccccc;
+}
+
+.forecast-info-sec {
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    background-color:#000000;
+}
+
+.forecast-info-main {
+    font-size: 15px;
+    background-color:#ff6600;
+}
+
+.forecast-info-main a {
+    color: #FFF;
+}
+
+.can{
+  width: 100%;
+  height: 50%;
+}
